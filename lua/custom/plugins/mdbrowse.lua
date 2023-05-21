@@ -1,3 +1,16 @@
+-- Get the current line under the cursor
+local function get_line_under_cursor()
+    -- Get the current cursor position
+    local current_line = vim.fn.line(".")
+    
+    -- Get the content of the current line
+    local line_content = vim.fn.getline(current_line)
+    
+    return line_content
+  end
+  
+  
+
 -- Get the text between square brackets on the current line
 local function get_text_between_square_brackets()
     -- Get the current line under the cursor
